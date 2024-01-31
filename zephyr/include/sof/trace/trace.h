@@ -9,11 +9,10 @@
 #ifndef ZEPHYR_INCLUDE_LOGGING_LOG_H_
 #include <zephyr/logging/log.h>
 #include <zephyr/sys/printk.h>
+#endif
 
 /* Level of SOF trace on Zephyr */
 #define SOF_ZEPHYR_TRACE_LEVEL LOG_LEVEL_INF
-
-#endif
 
 /* printk supports uint64_t so use it until LOG is ready */
 #define USE_PRINTK	1
