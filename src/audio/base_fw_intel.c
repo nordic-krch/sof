@@ -262,7 +262,7 @@ __cold static uint32_t basefw_get_ext_system_time(uint32_t *data_offset, char *d
 		return IPC4_MOD_NOT_INITIALIZED;
 	}
 
-	counter_get_value_64(dev, &art);
+	counter_get_value(dev, &art);
 
 	wallclk = sof_cycle_get_64();
 	ext_system_time_data.art_l = (uint32_t)art;
@@ -281,7 +281,7 @@ __cold static uint32_t basefw_get_ext_system_time(uint32_t *data_offset, char *d
 		return IPC4_MOD_NOT_INITIALIZED;
 	}
 
-	counter_get_value_64(dev, &rtc);
+	counter_get_value(dev, &rtc);
 	ext_system_time_data.rtc_l = (uint32_t)rtc;
 	ext_system_time_data.rtc_u = (uint32_t)(rtc >> 32);
 
